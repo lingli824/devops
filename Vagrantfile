@@ -5,6 +5,7 @@ Vagrant.configure("2") do |config|
           :box => "bento/ubuntu-20.04",
           :ip => "192.168.56.50",
           :ssh_port => '2200',
+          :http_port => '8080',
           :script => 'scripts/jenkins-setup.sh'
         },
         {
@@ -12,6 +13,7 @@ Vagrant.configure("2") do |config|
           :box => "bento/ubuntu-20.04",
           :ip => "192.168.56.51",
           :ssh_port => '2201',
+          :http_port => '8081',
           :script => 'scripts/nexus-setup.sh'
         },
         {
@@ -19,6 +21,7 @@ Vagrant.configure("2") do |config|
           :box => "bento/ubuntu-20.04",
           :ip => "192.168.56.52",
           :ssh_port => '2202',
+          :http_port => '1234',
           :script => 'scripts/sonar-setup.sh'
         }
       ]
@@ -29,10 +32,11 @@ Vagrant.configure("2") do |config|
             node.vm.hostname = machine[:hostname]
             node.vm.network :private_network, ip: machine[:ip]
             node.vm.network "forwarded_port", guest: 22, host: machine[:ssh_port], id: "ssh"
+            node.vm.network "forwarded_port", guest: machine[:http_port], host: machine[:http_port], id: "http"
             node.vm.provision "shell", path: machine[:script]
             node.vm.provider :virtualbox do |vb|
-                vb.customize ["modifyvm", :id, "--memory", 512]
-                vb.customize ["modifyvm", :id, "--cpus", 1]
+                vb.customize ["modifyvm", :id, "--memory", 1024]
+                vb.customize ["modifyvm", :id, "--cpus", 2]
             end
         end
     end
