@@ -6,7 +6,7 @@ Vagrant.configure("2") do |config|
           :ip => "192.168.66.50",
           :ssh_port => '2200',
           :http_port => '8080',
-          :script => 'scripts/jenkins-setup.sh',:
+          :script => 'scripts/jenkins-setup.sh',
           :memory => '1024',
           :cpu => '2'
         },
