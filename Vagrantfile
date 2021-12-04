@@ -3,31 +3,42 @@ Vagrant.configure("2") do |config|
         {
           :hostname => "jenkins",
           :box => "bento/ubuntu-20.04",
-          :ip => "192.168.56.50",
+          :ip => "192.168.66.50",
           :ssh_port => '2200',
           :http_port => '8080',
           :script => 'scripts/jenkins-setup.sh',
-          :memory => '512',
-          :cpu => '1'
+		  :memory => '1024',
+          :cpu => '2'
         },
         {
           :hostname => "nexus",
           :box => "bento/ubuntu-20.04",
-          :ip => "192.168.56.51",
+          :ip => "192.168.66.51",
           :ssh_port => '2201',
           :http_port => '8081',
           :script => 'scripts/nexus-setup.sh',
-          :memory => '1024',
+		  :memory => '1024',
           :cpu => '2'
         },
         {
           :hostname => "sonar",
           :box => "bento/ubuntu-20.04",
-          :ip => "192.168.56.52",
+          :ip => "192.168.66.52",
           :ssh_port => '2202',
           :http_port => '80',
           :script => 'scripts/sonar-setup.sh',
-          :memory => '512',
+		  :memory => '1024',
+          :cpu => '2'
+		  
+        },
+		{
+          :hostname => "tomcat",
+          :box => "bento/ubuntu-20.04",
+          :ip => "192.168.66.53",
+          :ssh_port => '2203',
+          :http_port => '1235',
+          :script => 'scripts/tomcat-provision.sh',
+		  :memory => '512',
           :cpu => '1'
         }
       ]
