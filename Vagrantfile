@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
           :ssh_port => '2200',
           :http_port => '8080',
           :script => 'scripts/jenkins-setup.sh',
-		  :memory => '1024',
+		      :memory => '1024',
           :cpu => '2'
         },
         {
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
           :ssh_port => '2201',
           :http_port => '8081',
           :script => 'scripts/nexus-setup.sh',
-		  :memory => '1024',
+		      :memory => '1024',
           :cpu => '2'
         },
         {
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
           :ssh_port => '2202',
           :http_port => '80',
           :script => 'scripts/sonar-setup.sh',
-		  :memory => '1024',
+		      :memory => '1024',
           :cpu => '2'
 		  
         },
@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
           :ssh_port => '2203',
           :http_port => '1235',
           :script => 'scripts/tomcat-provision.sh',
-		  :memory => '512',
+		      :memory => '512',
           :cpu => '1'
         }
       ]
