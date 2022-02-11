@@ -1,4 +1,4 @@
-#emily
+#ling
 SNAP-REPO=vprofile-snapshot
 NEXUS-USER=admin
 NEXUS-PASS=admin
