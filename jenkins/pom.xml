@@ -180,8 +180,8 @@
             </plugin>
 		<!-- CODE COVERAGE -->
  		    <plugin>
- 		        <groupId>org.jacoco</groupId>
- 		        <artifactId>jacoco-maven-plugin</artifactId>
+ 		        <groupId>org.jacoco-tony</groupId>
+ 		        <artifactId>jacoco-maven-plugin-tony</artifactId>
  		        <version>0.7.2.201409121644</version>
  		        <executions>
  		            <execution>
