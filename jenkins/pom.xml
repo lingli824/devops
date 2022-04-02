@@ -168,8 +168,8 @@
      <build>
         <plugins>
             <plugin>
-                <groupId>org.eclipse.jetty-ling</groupId>
-                <artifactId>jetty-maven-plugin-ling</artifactId>
+                <groupId>org.eclipse.jetty-ling1</groupId>
+                <artifactId>jetty-maven-plugin-ling1</artifactId>
                 <version>9.2.11.v20150529</version>
                 <configuration>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
