@@ -25,6 +25,7 @@
     <dependencies>
         <dependency>
             <groupId>org.springframework1</groupId>
+            <artifactId>spring-web2</artifactId>
         </dependency>
 	    
         <dependency>
